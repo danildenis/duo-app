@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
   <title>DUO — расчёт сайта</title>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script src="https://unpkg.com/@vkontakte/vk-bridge@2/dist/browser.min.js"></script>
+  <script>
+  document.write(/[?&]vk_app_id=/.test(location.search)
+    ? '<script src="https://unpkg.com/@vkontakte/vk-bridge@2/dist/browser.min.js"><\/script>'
+    : '<script src="https://telegram.org/js/telegram-web-app.js"><\/script>');
+</script>
   <script src="platform.js?v=1791842635"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
